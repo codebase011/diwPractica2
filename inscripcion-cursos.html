@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="M. Alejandro Sánchez">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Página web de El Taller, cursos de cerámica">
+    <meta name="keywords" content="el,taller,cursos,ceramica,artesania,alfareria">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Inscripción a los cursos</title>
+</head>
+
+<body>
+    <header>
+        <nav id="menu-normal">
+            <p><img src="img/isologo-taller.png" alt="isologo taller"><a href="index.html">el taller</a></p>
+            <ul>
+                <li><a href="que-es-la-ceramica.html">CERÁMICA</a></li>
+                <li><a href="cursos.html">CURSOS</a></li>
+                <li class="active"><a href="inscripcion-cursos.html">INSCRIPCIÓN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="normal">Inscripción a los cursos</h1>
+        <div id="contenedor-formulario-detalles">
+            <p id="info-campos-obligatorios">Los campos marcados con * son obligatorios</p>
+
+            <form id="formulario-inscripcion" action="#">
+                <fieldset id="detalles-inscripcion">
+                    <legend>Detalles de la inscripcion</legend>
+                    <div class="formulario-celda">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" name="nombre" id="nombre" minlength="2" maxlength="64"
+                            pattern="^[A-Za-zÀ-ÿ'\-\s]{2,64}"
+                            title="El nombre solo puede contener letras, apóstrofes y guiones, y debe tener al menos 2 caracteres"
+                            required>
+                    </div>
+                    <div class="formulario-celda">
+                        <label for="apellidos">Apellidos *</label>
+                        <input type="text" name="apellidos" id="apellidos" minlength="2" maxlength="128"
+                            pattern="^[A-Za-zÀ-ÿ'\-\s]{2,64}" required>
+                    </div>
+                    <div class="formulario-celda">
+                        <label for="correo-electronico">Correo electrónico *</label>
+                        <input type="email" name="correo-electronico" id="correo-electronico" required>
+                    </div>
+                    <div class="formulario-celda">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="text" name="telefono" id="telefono" minlength="9" maxlength="15" pattern="^\d{9,15}$"
+                            title="Este campo debe tener una longitud mínima de 9 caracteres y sólo puede contener números"
+                            required>
+                    </div>
+                    <div class="formulario-celda">
+                        <label for="fecha-de-nacimiento">Fecha de nacimiento *</label>
+                        <input type="date" name="fecha-de-nacimiento" id="fecha-de-nacimiento" required>
+                    </div>
+                    <div class="formulario-celda">
+                        <label for="curso">Nombre *</label>
+                        <select name="curso" id="curso" required>
+                            <option value="" disabled selected>Selecciona el curso</option>
+                            <option value="torno">Torno</option>
+                            <option value="ceramica">Cerámica</option>
+                            <option value="modelado">Modelado</option>
+                            <option value="msmaltes">Esmaltes</option>
+                            <option value="joyeria">Joyería cerámica</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset id="otras-informaciones">
+                    <legend>Otra informaciones *</legend>
+                    <fieldset id="pregunta">
+                        <legend>¿Has hecho otros cursos con nosotros?</legend>
+                        <div>
+                            <input type="radio" name="pregunta" id="si" value="si" required>
+                            <label for="si">Sí</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pregunta" id="no" value="no" required>
+                            <label for="no">No</label>
+                        </div>
+                    </fieldset>
+                    <p>¿Quieres comentar o preguntar algo?</p>
+                    <textarea name="comentarios" id="comentarios"></textarea>
+                </fieldset>
+                <fieldset id="metodo-pago">
+                    <legend>Elige un método de pago *</legend>
+                    <div>
+                        <input type="radio" name="metodo-pago" id="transferencia" required>
+                        <label for="transferencia">Transferencia</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="metodo-pago" id="tarjeta" required>
+                        <label for="tarjeta">Tarjeta</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="metodo-pago" id="efectivo" required>
+                        <label for="efectivo">Efectivo</label>
+                    </div>
+                </fieldset>
+                <div id="info-proteccion-datos">
+                    INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE <strong>EL TALLER. Finalidades</strong>: recogida de datos
+                    para la inscripción como socio del interesado. <strong>Legitimación</strong>: Consentimiento del
+                    interesado.
+                    <strong>Destinatarios</strong>: No están previstas cesiones de datos a terceros, excepto obligación
+                    legal. <strong>Derechos</strong>: Puede retirar su consentimiento en cualquier momento, así como
+                    acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a
+                    <a href="mailto:info@eltaller.es">info@eltaller.es</a>. <strong>Información Adicional</strong>:
+                    Puede ampliar la información en el enlace de <a href="#">Aviso Legal</a> y <a href="#">Política de
+                        privacidad</a>.
+                </div>
+                <input type="checkbox" name="aceptar-politica" id="aceptar-politica" required>
+                <label for="aceptar-politica">He leído y acepto la <a href="#">política de privacidad</a> *</label>
+                <input type="submit" value="INSCRÍBEME">
+            </form>
+        </div>
+    </main>
+
+    <footer id="footer-normal">
+        <div id="contenedor-footer-normal">
+            <nav id="menu-footer-normal">
+                <ul>
+                    <li><a href="#">Aviso legal</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>
+            </nav>
+            <p>2024 &copy; M. Alejandro Sánchez García</p>
+        </div>
+    </footer>
+</body>
+
+</html>

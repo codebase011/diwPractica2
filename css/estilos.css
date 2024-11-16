@@ -1,0 +1,521 @@
+/* ----------------------------------------------------------------------------------------------------------------------------
+   FUENTE
+----------------------------------------------------------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ----------------------------------------------------------------------------------------------------------------------------
+   VARIABLES GLOBALES
+----------------------------------------------------------------------------------------------------------------------------- */
+:root {
+    --color-enlaces-menu: #FFFFFF;
+    --color-enlaces-menu-hover: #6BDEC8;
+    --color-enlaces-texto: #FFFFFF;
+    --color-enlaces-texto-hover: #942C0B;
+    --color-fuente-principal: #000000;
+    --color-fuente-secundario: #FFFFFF;
+    --color-destacado: #942C0B;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------
+   RESET Y ESTILOS GLOBALES
+----------------------------------------------------------------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: var(--color-fuente-principal);
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body#index {
+    background-image: url('../img/home-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-fuente-secundario);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------
+   HEADER
+----------------------------------------------------------------------------------------------------------------------------- */
+header {
+    min-height: fit-content;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------
+   MENÚS DEL HEADER Y DEL FOOTER
+----------------------------------------------------------------------------------------------------------------------------- */
+/* Uso flex para mostrar los items <li> (enlaces) de forma horizontal */
+#menu-index ul,
+#menu-normal ul {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+#menu-index {
+    margin: 2em 0em;
+}
+
+#menu-normal {
+    padding: 1em 0 2.5em;
+    background-color: black;
+    color: #FFFFFF;
+}
+
+#menu-normal p {
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: -0.15rem;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+/* Tamaño isologo del menu normal */
+#menu-normal img {
+    width: 0.65em;
+    margin-right: 0.3em;
+}
+
+/* Enlaces de los menus del header y footer */
+#menu-index a,
+#menu-normal a,
+#footer-index a,
+#footer-normal a {
+    color: var(--color-enlaces-menu);
+    text-decoration: none;
+}
+
+#menu-index a:hover,
+#menu-normal a:hover,
+#footer-index a:hover,
+#footer-normal a:hover {
+    color: var(--color-enlaces-menu-hover);
+}
+
+#menu-normal li {
+    padding-bottom: 0.75em;
+}
+
+#menu-normal li.active {
+    border-bottom: 2px solid #FFFFFF;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------
+   MAIN
+----------------------------------------------------------------------------------------------------------------------------- */
+main {
+    flex: 1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Enlaces del main */
+main a {
+    color: var(--color-enlaces-texto-hover);
+    border-bottom: 1px dotted var(--color-enlaces-texto-hover);
+    text-decoration: none;
+}
+
+main a:hover {
+    border-bottom: 1px solid;
+    text-decoration: none;
+}
+
+article {
+    width: 60%;
+}
+
+article p {
+    text-align: left;
+}
+
+p#info-campos-obligatorios {
+    margin-top: 1.75em;
+    font-size: 0.75rem;
+}
+
+main p#slogan {
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+main #isologo {
+    max-width: 75px;
+}
+
+h1.index {
+    font-size: 8.5rem;
+    letter-spacing: -0.6rem;
+}
+
+h1.normal {
+    font-size: 2rem;
+    margin-top: 1em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 1em;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------
+   QUE ES LA CERÁMICA
+----------------------------------------------------------------------------------------------------------------------------- */
+article {
+    text-align: left;
+}
+
+article h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+    margin-top: 1em;
+    padding-bottom: 0.25em;
+}
+
+article p {
+    margin-bottom: 1em;
+    line-height: 1.5em;
+    font-size: 1rem;
+}
+
+article h1 {
+    margin-bottom: 1em;
+}
+
+article ul {
+    margin-left: 2em;
+    list-style-type: square;
+}
+
+article ul li {
+    margin-bottom: 0.5em;
+}
+
+article dl {
+    margin-left: 3em;
+}
+
+article dt {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+article dd {
+    margin: 0.5em 0 1em 1.5em;
+    line-height: 1.5em;
+}
+
+#seccion-introduccion figure {
+    width: 70%;
+    margin: 2em auto 3em;
+    margin-bottom: 3em;
+}
+
+#seccion-introduccion figure iframe {
+    width: 100%;
+}
+
+#seccion-introduccion figure figcaption {
+    font-size: 0.65rem;
+}
+
+#seccion-fuente-original p {
+    font-size: 0.75rem;
+    margin-bottom: 3em;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------
+   CURSOS
+----------------------------------------------------------------------------------------------------------------------------- */
+figure#alfarero-manos {
+    max-width: 42%;
+    font-size: 0.5rem;
+    margin-bottom: 4em;
+}
+
+figure#alfarero-manos figcaption {
+    margin-top: 1em;
+    text-align: left;
+}
+
+figure#alfarero-manos img {
+    max-width: 100%;
+}
+
+main #contenedor-texto-cursos-ceramica {
+    max-width: 42%;
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+#contenedor-texto-cursos-ceramica {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5em;
+}
+
+#tabla-programacion-cursos {
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#tabla-programacion-cursos {
+    min-width: 60%;
+    margin-bottom: 3em;
+}
+
+#tabla-programacion-cursos caption {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-size: 1rem;
+    padding: 0.25em 0;
+}
+
+#tabla-programacion-cursos thead th {
+    border-bottom: 1px solid black;
+}
+
+
+#tabla-programacion-cursos thead {
+    font-size: 0.65rem;
+}
+
+#tabla-programacion-cursos tbody td {
+    font-size: 0.75em;
+}
+
+/* Quitar negrita a las celdas del thead */
+#tabla-programacion-cursos thead th {
+    font-weight: normal;
+    padding: 0.5em 0;
+}
+
+/* Poner en negrita la primera celda de cada fila 
+y la letra un poco mas grande */
+#tabla-programacion-cursos tbody tr td:first-child {
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+}
+
+#tabla-programacion-cursos thead tr th:first-child {
+    padding-left: 0.5em;
+}
+
+/* Hacer efecto cebra alternando colores en filas */
+#tabla-programacion-cursos tbody tr:nth-of-type(odd) {
+    background-color: #6BDEC8;
+}
+
+/* Ajustar altura de las filas del tbody */
+#tabla-programacion-cursos tbody tr {
+    height: 2em;
+}
+
+#tabla-programacion-cursos tfoot {
+    font-size: 0.6rem;
+    border-bottom: 1px solid black;
+}
+
+#tabla-programacion-cursos tfoot td {
+    padding: 0.65em;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------
+   INSCRIPCION CURSOS
+----------------------------------------------------------------------------------------------------------------------------- */
+fieldset {
+    border: 1px solid black;
+}
+
+fieldset legend {
+    font-weight: bold;
+}
+
+#contenedor-formulario-detalles {
+    text-align: left;
+    width: 100%;
+    width: 50%;
+}
+
+/* Dividir los inputs en 2 columnas */
+#formulario-inscripcion fieldset#detalles-inscripcion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.25em;
+    gap: 0.75em;
+    margin: 1em 0;
+}
+
+label {
+    font-size: 0.75rem;
+}
+
+#formulario-inscripcion fieldset#detalles-inscripcion label {
+    display: block;
+    margin-bottom: 0.75em;
+}
+
+#formulario-inscripcion input[type="text"],
+#formulario-inscripcion input[type="date"],
+#formulario-inscripcion input[type="email"],
+select {
+    width: 100%;
+    height: 3em;
+    padding: 0.75em 0.65em 0.75em;
+    font-size: 0.75rem;
+    border: 1px solid black;
+}
+
+#formulario-inscripcion input[type="radio"] {
+    border: 1px solid black;
+    transform: scale(0.7);
+}
+
+fieldset#otras-informaciones,
+fieldset#metodo-pago {
+    padding: 1.25em;
+    margin-top: 1em;
+}
+
+fieldset#otras-informaciones p {
+    font-size: 0.75rem;
+}
+
+fieldset#pregunta {
+    padding: 1em 0.75em;
+    margin-bottom: 1em;
+}
+
+fieldset#pregunta div,
+fieldset#metodo-pago div {
+    padding: 0.5em 0.5em;
+}
+
+textarea {
+    margin-top: 1em;
+    border: 1px solid black;
+    width: 100%;
+    height: 10em;
+}
+
+fieldset#metodo-pago {
+    margin-bottom: 1em;
+}
+
+#info-proteccion-datos {
+    font-size: 0.75rem;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+input[type="checkbox"] {
+    transform: scale(0.7);
+}
+
+input[type="submit"] {
+    margin-top: 1em;
+    margin-bottom: 4em;
+    display: block;
+    background-color: red;
+    padding: 0.75em 1.25em;
+    font-size: 0.75rem;
+    color: #FFFFFF;
+    border: 0px;
+    background-color: #942C0B;
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------
+   FOOTER
+----------------------------------------------------------------------------------------------------------------------------- */
+footer {
+    background-color: black;
+    color: white;
+    font-size: 0.8rem;
+    height: 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-bottom: 1em;
+}
+
+#footer-index {
+    background: none;
+}
+
+#footer-normal {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 2em 0 3em;
+}
+
+footer ul {
+    display: flex;
+    gap: 1.2em;
+    list-style: none;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+#footer-normal ul {
+    justify-content: left;
+}
+
+#contenedor-footer-normal {
+    min-width: 60%;
+}
+
+#menu-footer-index {
+    margin-bottom: 1em;
+}
+
+footer p {
+    margin-bottom: 0.4em;
+    font-size: 0.75rem;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------
+   TABLA ACCESIBLE E IFRAME
+----------------------------------------------------------------------------------------------------------------------------- */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* Quitar border al iframe, frameborder="0" esta obsoleto */
+iframe {
+    border: none;
+}
